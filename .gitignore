@@ -1,0 +1,16 @@
+node_modules/
+dist/win-unpacked/
+dist/*.blockmap
+dist/builder-debug.yml
+*.log
+.DS_Store
+*.dmg
+*.deb
+*.rpm
+*.AppImage
+*.snap
+config.json
+
+# Allow installer in dist folder
+!dist/*.exe
+
