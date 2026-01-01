@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huskelapp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>📝 Huskelapp</h1>
+            <div class="header-actions">
+                <button id="addTaskToggleBtn" class="icon-btn" title="Add new task">➕</button>
+                <button id="minimizeBtn" class="icon-btn" title="Minimize to tray">➖</button>
+                <button id="settingsBtn" class="icon-btn" title="Settings">⚙️</button>
+            </div>
+        </div>
+
+        <div class="task-form" id="taskForm" style="display: none;">
+            <input type="text" id="taskName" placeholder="Task name..." maxlength="50">
+            <textarea id="taskMessage" placeholder="Message/Notes..." rows="3"></textarea>
+            <input type="url" id="taskLink" placeholder="Link (optional)..." />
+            <button id="addTaskBtn" class="add-btn">+ Add Task</button>
+        </div>
+
+        <div class="tasks-container" id="tasksContainer">
+            <!-- Tasks will be dynamically added here -->
+        </div>
+
+        <div class="settings-panel" id="settingsPanel" style="display: none;">
+            <h3>Settings</h3>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="alwaysOnTopSetting">
+                    Always on Top
+                </label>
+            </div>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="autoLaunchSetting">
+                    Start with Windows
+                </label>
+            </div>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="showFrameSetting">
+                    Show Window Frame (Title Bar & Menu)
+                </label>
+            </div>
+            <button id="closeSettingsBtn" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
+
